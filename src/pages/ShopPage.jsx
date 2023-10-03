@@ -46,14 +46,14 @@ const ShopPage = () => {
 
         <section className="p-5 flex flex-wrap justify-between gap-y-[14px]">
           {(products ?? []).map((product) => (
-              <ProductCard
-                key={product.item_code}
-                title={product.name}
-                productId={product.name}
-                itemCode={product.item_code}
-                price={product.formatted_price}
-                thumbnail={product.website_image ? product.website_image : "https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/sneakers.png"} 
-              />
+            <ProductCard
+              key={product.item_code}
+              title={product.name}
+              productId={product.name}
+              itemCode={product.item_code}
+              price={product.formatted_price}
+              thumbnail={product.website_image ? product.website_image : "https://storage.googleapis.com/sfui_docs_artifacts_bucket_public/production/sneakers.png"} 
+            />
           ))}
         </section>
       </main>

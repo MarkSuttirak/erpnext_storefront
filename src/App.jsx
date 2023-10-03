@@ -68,7 +68,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <FrappeProvider url={"https://dev.zaviago.com"}
+    <FrappeProvider url={import.meta.env.VITE_ERP_URL}
       enableSocket={false}
       tokenParams={{
         type: "token",
@@ -106,6 +106,8 @@ function App() {
               <Route path="/shop" element={<ShopPage />}/>
               <Route path="/shop/filter" element={<ShopPageFilter />}/>
               <Route path="/shop/type" element={<ShopPageType />}/>
+              <Route path="/shop/search" element={<ShopPageSearch />} />
+              <Route path="/shop/viewed" element={<ShopPageViewed />} />
               <Route path="/wishlist" element={<Wishlist />}/>
               <Route path="/reward" element={<RewardPage />}/>
               <Route path="/reward-details" element={<RewardDetails />}/>
@@ -119,8 +121,6 @@ function App() {
               <Route path="/promptpay" element={<Promptpay />} />
               <Route path="/credit-card" element={<CreditCard />} />
               <Route path="/mobile-banking" element={<MobileBanking />} />
-              <Route path="/shop/search" element={<ShopPageSearch />} />
-              <Route path="/shop/viewed" element={<ShopPageViewed />} />
               <Route path="/store-location" element={<StoreLocation />} />
               <Route path="/tax-invoice-request" element={<TaxInvoiceRequest />} />
 
